@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Hey [Her Name],</h1>
+      <h1>Hey Katherine,</h1>
       <p>I have something to ask you...</p>
       <h2>Would you like to go on a date with me?</h2>
 
