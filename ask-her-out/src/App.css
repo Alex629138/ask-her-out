@@ -1,7 +1,20 @@
+@keyframes upanddown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #ffe5ec, #ffc2d1);
+  background: linear-gradient(to right, #e998bf, #c32a50);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,9 +23,9 @@ body {
 
 .container {
   background-color: white;
-  padding: 2rem 3rem;
+  padding: 3rem 3rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 50px rgb(235, 140, 192);
   text-align: center;
   max-width: 400px;
 }
@@ -36,21 +49,17 @@ p {
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   margin: 1rem 0;
 }
 
 button {
-  padding: 0.7rem 1.2rem;
+  padding: 1.2rem 3rem;
   border: none;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: transform 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
 }
 
 button:first-child {
@@ -58,13 +67,23 @@ button:first-child {
   color: white;
 }
 
+button:first-child:hover{
+  transform: scale(1.5);
+}
+
 button:last-child {
   background-color: #dee2e6;
   color: #333;
+}
+
+button:last-child:hover{
+  transform: scale(0.5);
 }
 
 .response {
   margin-top: 1.5rem;
   font-weight: bold;
   color: #d6336c;
+  font-size: 2rem;
+  animation: upanddown 1s infinite .2s linear;
 }
